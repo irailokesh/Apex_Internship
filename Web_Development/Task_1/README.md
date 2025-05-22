@@ -24,17 +24,6 @@ This is a multi-page website that includes:
 
 I am Iraiyanbu S, currently studying in the Department of Information Technology at Panimalar Engineering College, Chennai. I'm passionate about web development, Java programming, and emerging tech like AI, telemedicine, and smart farming. My goal is to become a skilled Java developer and contribute to real-world software projects.
 
-## 📂 File Structure
-.
-├── index.html
-├── about.html
-├── skills.html
-├── hobbies.html
-├── contact.html
-├── styles.css
-├── script.js
-└── README.md
-
 ## 🌐 Live Demo
 
 *Coming soon...* (You can use GitHub Pages after pushing the code)
