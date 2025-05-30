@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    form, .todo {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .todo ul {
+      list-style: none;
+      padding: 0;
+    }
+    .todo li {
+      background: #ddd;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>My Webpage</div>
+    <nav>
+      <a href="contact.html">Contact</a>
+      <a href="todo.html">To-Do List</a>
+    </nav>
+  </header>
+  <div class="container">
+    <p>Welcome! Use the navigation links to access the Contact Form or To-Do List.</p>
+  </div>
+</body>
+</html>

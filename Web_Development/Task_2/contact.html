@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #f4f4f4;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Contact Us</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="todo.html">To-Do</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="contactForm" onsubmit="return validateForm()">
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" />
+      <div class="error" id="nameError"></div>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" />
+      <div class="error" id="emailError"></div>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" />
+      <div class="error" id="phoneError"></div>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" />
+      <div class="error" id="subjectError"></div>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4"></textarea>
+      <div class="error" id="messageError"></div>
+
+      <label for="contactMethod">Preferred Contact Method:</label>
+      <select id="contactMethod">
+        <option value="">--Select--</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+      </select>
+      <div class="error" id="contactMethodError"></div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" id="subscribe" style="width:auto; margin-right: 8px;" />
+        Subscribe to our newsletter
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      let isValid = true;
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const contactMethod = document.getElementById("contactMethod").value;
+
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("phoneError").textContent = "";
+      document.getElementById("subjectError").textContent = "";
+      document.getElementById("messageError").textContent = "";
+      document.getElementById("contactMethodError").textContent = "";
+
+      const emailRegex = /^\S+@\S+\.\S+$/;
+
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        isValid = false;
+      }
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required.";
+        isValid = false;
+      } else if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format.";
+        isValid = false;
+      }
+      if (phone === "") {
+        document.getElementById("phoneError").textContent = "Phone number is required.";
+        isValid = false;
+      }
+      if (subject === "") {
+        document.getElementById("subjectError").textContent = "Subject is required.";
+        isValid = false;
+      }
+      if (message === "") {
+        document.getElementById("messageError").textContent = "Message is required.";
+        isValid = false;
+      }
+      if (contactMethod === "") {
+        document.getElementById("contactMethodError").textContent = "Please select a contact method.";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</body>
+</html>
