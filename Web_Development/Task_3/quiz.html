@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="quizCss.css">
+</head>
+<body>
+  <header>
+    <h1>JS Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="weather.html">Weather</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2 id="question">Question will appear here</h2>
+    <div id="options"></div>
+    <button onclick="nextQuestion()">Next</button>
+    <p id="result"></p>
+  </main>
+  <script>
+    const quiz = [
+      { q: "What does HTML stand for?", options: ["HyperText Markup Language", "HotMail", "How To Make Lasagna"], answer: 0 },
+      { q: "What is CSS used for?", options: ["Styling", "Programming", "Cooking"], answer: 0 },
+      { q: "Which language is used for web scripting?", options: ["Python", "JavaScript", "PHP"], answer: 1 }
+    ];
+    let current = 0, score = 0;
+
+    function loadQuestion() {
+      document.getElementById("question").textContent = quiz[current].q;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+      quiz[current].options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(i);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(i) {
+      if (i === quiz[current].answer) {
+        score++;
+      }
+      document.getElementById("result").textContent = `Score: ${score}/${quiz.length}`;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < quiz.length) {
+        loadQuestion();
+        document.getElementById("result").textContent = "";
+      } else {
+        document.getElementById("question").textContent = "Quiz Completed!";
+        document.getElementById("options").innerHTML = "";
+      }
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>
