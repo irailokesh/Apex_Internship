@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium e-commerce store for tech gadgets">
+    <title>TechGadgets - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preload" href="assets/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+<!-- Replace with this -->
+<img src="https://images.unsplash.com/photo-1636051028886-0059ad2383c8?w=150&auto=format" alt="TechGadgets Logo" width="150" height="50" loading="lazy">                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html" aria-label="Shopping cart">
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main-content">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to TechGadgets</h1>
+                <p>Discover the latest in technology and innovation</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Shipping</h3>
+                    <p>On all orders over $50</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>30-Day Returns</h3>
+                    <p>No questions asked</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Amazing products and excellent customer service!"</p>
+                    <div class="author">- Sarah J.</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Fast shipping and high-quality gadgets. Will shop again!"</p>
+                    <div class="author">- Michael T.</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Best prices I've found online for tech products."</p>
+                    <div class="author">- David L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest products and deals</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechGadgets</h3>
+                    <p>Your one-stop shop for all tech needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: info@techgadgets.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Tech St, Silicon Valley</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechGadgets. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
