@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadgets - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <main id="main-content">
+        <section class="products-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Our Products</h1>
+                    <div class="filter-controls">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="phones">Smartphones</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                        <select id="sort-by">
+                            <option value="default">Sort By</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="all-products">
+                    <!-- Products loaded via JavaScript -->
+                </div>
+                <div class="pagination">
+                    <button class="btn" id="prev-page">Previous</button>
+                    <span class="page-numbers" id="page-numbers">1 of 3</span>
+                    <button class="btn" id="next-page">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/products.js" defer></script>
+</body>
+</html>

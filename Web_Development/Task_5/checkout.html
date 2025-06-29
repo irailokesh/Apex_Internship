@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadgets - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <main id="main-content">
+        <section class="checkout-page">
+            <div class="container">
+                <div class="checkout-steps">
+                    <div class="step active">1. Shipping</div>
+                    <div class="step">2. Payment</div>
+                    <div class="step">3. Confirmation</div>
+                </div>
+                
+                <form id="checkout-form">
+                    <div class="checkout-grid">
+                        <div class="checkout-form">
+                            <h2>Shipping Information</h2>
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                </select>
+                            </div>
+                            
+                            <h2>Payment Method</h2>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="credit-card" name="payment" checked>
+                                    <label for="credit-card">Credit Card</label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="paypal" name="payment">
+                                    <label for="paypal">PayPal</label>
+                                </div>
+                            </div>
+                            
+                            <div class="credit-card-form">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-name">Name on Card</label>
+                                    <input type="text" id="card-name">
+                                </div>
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiry Date</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h2>Your Order</h2>
+                            <div class="order-items" id="checkout-items">
+                                <!-- Items loaded via JavaScript -->
+                            </div>
+                            <div class="order-totals">
+                                <div class="total-row">
+                                    <span>Subtotal</span>
+                                    <span id="checkout-subtotal">$0.00</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Shipping</span>
+                                    <span id="checkout-shipping">$0.00</span>
+                                </div>
+                                <div class="total-row grand-total">
+                                    <span>Total</span>
+                                    <span id="checkout-total">$0.00</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/cart.js" defer></script>
+</body>
+</html>

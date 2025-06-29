@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadgets - Your Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <main id="main-content">
+        <section class="cart-page">
+            <div class="container">
+                <h1>Your Shopping Cart</h1>
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items loaded via JavaScript -->
+                    </div>
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span id="shipping">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+                        <a href="checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+                        <a href="products.html" class="btn btn-secondary btn-block">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/cart.js" defer></script>
+</body>
+</html>
